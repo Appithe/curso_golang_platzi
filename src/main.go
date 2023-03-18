@@ -10,35 +10,32 @@ func main() {
 
 	fmt.Println("Area cuadrado: ", areaCuadrado)
 
-	x := 10
-	y := 50
+	// Reto
+	// Calcular area de un circulo y un trapecio y rectángulo
 
-	// Suma
-	result := x + y
-	fmt.Println("Suma: ", result)
+	// Rectángulo
+	baseRectangulo := 20
+	alturaRectangulo := 10
 
-	// Resta
-	result = y - x
-	fmt.Println("Resta: ", result)
+	areaRectangulo := baseRectangulo * alturaRectangulo
 
-	// Multiplicación
-	result = x * y
-	fmt.Println("Multiplicación: ", result)
+	fmt.Println("El Area del Rectángulo es :", areaRectangulo)
 
-	// Division
-	result = y / x
-	fmt.Println("Division: ", result)
+	// Circulo : AreaCirculo = pi por radio al cudrado
+	const PI float64 = 3.14 // Constant
+	var radioCirculo float64 = 10
 
-	// Modulo
-	result = y % x
-	fmt.Println("Modulo: ", result)
+	areaCirculo := PI * radioCirculo * radioCirculo
 
-	// Incrementar
-	x++
-	fmt.Println("Incrementar: ", x)
+	fmt.Println("El Area del Circulo es :", areaCirculo)
 
-	// Decrementar
-	x--
-	fmt.Println("Decrementar: ", x)
+	// Trapecio
+	var baseUno float64 = 6
+	var baseDos float64 = 15
+	var alturaTrapecio float64 = 25
+
+	areaTrapecio := ((baseUno + baseDos) * alturaTrapecio) / 2
+
+	fmt.Println("El Area del Trapecio es :", areaTrapecio)
 
 }
