@@ -5,31 +5,25 @@ import (
 )
 
 func main() {
-	/* modulo := 5 % 2
+	// Defer --> antes de terminar de ejecutarse la función ejecuta el código que le sigue en la linea, se recomienda usar una por función; se puede usar para cerrar sesiones en DDBB
+	defer fmt.Print("Hola")
+	fmt.Println("Mundo")
 
-	switch modulo {
-	case 0:
-		fmt.Println("Es par")
-	default:
-		fmt.Println("Es impar")
-	} */
+	// Continue y break
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
 
-	switch modulo := 5 % 2; modulo {
-	case 0:
-		fmt.Println("Es par")
-	default:
-		fmt.Println("Es impar")
-	}
+		// Continue --> se puede usar para manejo de errores
+		if i == 2 {
+			fmt.Println("Es 2")
+			continue
+		}
 
-	// Sin condición
-	value := 200
-	switch {
-	case value > 100:
-		fmt.Println("Es mayor a 100")
-	case value < 0:
-		fmt.Println("Es menor a 0")
-	default:
-		fmt.Println("no condición")
+		// Break
+		if i == 8 {
+			fmt.Println("Break")
+			break
+		}
 	}
 
 }
