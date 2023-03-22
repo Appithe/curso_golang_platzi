@@ -3,39 +3,28 @@ package main
 import "fmt" // paquete para imprimir en consola
 
 func main() {
+	// declaración de variables
 
-	// Area cuadrado
-	const baseCuadrado = 10
-	areaCuadrado := baseCuadrado * baseCuadrado
+	helloMessage := "Hello"
+	worldMessage := "World"
 
-	fmt.Println("Area cuadrado: ", areaCuadrado)
+	// Println
+	fmt.Println(helloMessage, worldMessage)
+	fmt.Println(helloMessage, worldMessage)
 
-	// Reto
-	// Calcular area de un circulo y un trapecio y rectángulo
+	// Printf
+	nombre := "Platzi"
+	cursos := 500
 
-	// Rectángulo
-	baseRectangulo := 20
-	alturaRectangulo := 10
+	fmt.Printf("%s tiene mas de %d cursos\n", nombre, cursos) // %s para strings y %d para enteros
+	fmt.Printf("%v tiene mas de %v cursos\n", nombre, cursos) // %v si no sabemos que tipo de dato estará ahi
 
-	areaRectangulo := baseRectangulo * alturaRectangulo
+	// Sprintf --> guarda el mensaje en una variable para después imprimirlo
+	message := fmt.Sprintf("%s tiene mas de %d cursos", nombre, cursos)
+	fmt.Println(message)
 
-	fmt.Println("El Area del Rectángulo es :", areaRectangulo)
-
-	// Circulo : AreaCirculo = pi por radio al cudrado
-	const PI float64 = 3.14 // Constant
-	var radioCirculo float64 = 10
-
-	areaCirculo := PI * radioCirculo * radioCirculo
-
-	fmt.Println("El Area del Circulo es :", areaCirculo)
-
-	// Trapecio
-	var baseUno float64 = 6
-	var baseDos float64 = 15
-	var alturaTrapecio float64 = 25
-
-	areaTrapecio := ((baseUno + baseDos) * alturaTrapecio) / 2
-
-	fmt.Println("El Area del Trapecio es :", areaTrapecio)
+	// Tipo de dato --> typeof en JS
+	fmt.Printf("helloMessage: %T\n", helloMessage)
+	fmt.Printf("cursos: %T", cursos)
 
 }
