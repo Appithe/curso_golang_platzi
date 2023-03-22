@@ -1,41 +1,44 @@
+/* Reto
+Calcular area de un circulo y un trapecio y rectángulo */
+
 package main
 
 import "fmt" // paquete para imprimir en consola
 
+func areaCuadrado(lado int) int {
+	return lado * lado
+}
+
+func areaRectangulo(base, altura int) int {
+	return base * altura
+}
+
+func areaCirculo(radio float64) float64 {
+	const PI float64 = 3.14
+
+	return PI * radio * radio
+}
+
+func areaTrapecio(baseA, baseB, altura float64) float64 {
+	return ((baseA + baseB) * altura) / 2
+}
+
 func main() {
 
 	// Area cuadrado
-	const baseCuadrado = 10
-	areaCuadrado := baseCuadrado * baseCuadrado
-
+	areaCuadrado := areaCuadrado(10)
 	fmt.Println("Area cuadrado: ", areaCuadrado)
 
-	// Reto
-	// Calcular area de un circulo y un trapecio y rectángulo
-
 	// Rectángulo
-	baseRectangulo := 20
-	alturaRectangulo := 10
-
-	areaRectangulo := baseRectangulo * alturaRectangulo
-
+	areaRectangulo := areaRectangulo(20, 10)
 	fmt.Println("El Area del Rectángulo es :", areaRectangulo)
 
-	// Circulo : AreaCirculo = pi por radio al cudrado
-	const PI float64 = 3.14 // Constant
-	var radioCirculo float64 = 10
-
-	areaCirculo := PI * radioCirculo * radioCirculo
-
+	// Circulo
+	areaCirculo := areaCirculo(10)
 	fmt.Println("El Area del Circulo es :", areaCirculo)
 
 	// Trapecio
-	var baseUno float64 = 6
-	var baseDos float64 = 15
-	var alturaTrapecio float64 = 25
-
-	areaTrapecio := ((baseUno + baseDos) * alturaTrapecio) / 2
-
+	areaTrapecio := areaTrapecio(6, 15, 25)
 	fmt.Println("El Area del Trapecio es :", areaTrapecio)
 
 }
