@@ -2,40 +2,34 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"strconv"
 )
 
 func main() {
-	v1 := 1
-	v2 := 2
+	/* modulo := 5 % 2
 
-	if v1 == 1 {
-		fmt.Println("Es 1")
-	} else {
-		fmt.Println("No es 1")
+	switch modulo {
+	case 0:
+		fmt.Println("Es par")
+	default:
+		fmt.Println("Es impar")
+	} */
+
+	switch modulo := 5 % 2; modulo {
+	case 0:
+		fmt.Println("Es par")
+	default:
+		fmt.Println("Es impar")
 	}
 
-	// With AND
-	if v1 == 1 && v2 == 2 {
-		fmt.Println("Es verdad")
+	// Sin condición
+	value := 200
+	switch {
+	case value > 100:
+		fmt.Println("Es mayor a 100")
+	case value < 0:
+		fmt.Println("Es menor a 0")
+	default:
+		fmt.Println("no condición")
 	}
 
-	// With OR
-	if v1 == 0 || v2 == 2 {
-		fmt.Println("Es verdad, OR")
-	}
-
-	// convertir texto a numero
-	value, err := strconv.Atoi("53")
-	if err != nil { // nil --> es true cuando una función determinada tiene un error
-		log.Fatal(err)
-	}
-	fmt.Println("Value: ", value)
-
-	/*
-		Retos:
-		1.- Determinar si un numero es par o impar
-		2.- Validar usuario y contraseña
-	*/
 }
