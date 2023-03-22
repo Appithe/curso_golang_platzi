@@ -32,4 +32,10 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Println("Value: ", value)
+
+	/*
+		Retos:
+		1.- Determinar si un numero es par o impar
+		2.- Validar usuario y contraseña
+	*/
 }
