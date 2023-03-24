@@ -1,27 +1,20 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
+
+type car struct {
+	brand string
+	year  int
+}
 
 func main() {
-	m := make(map[string]int)
+	myCar := car{brand: "Ford", year: 2020}
+	fmt.Println(myCar)
 
-	m["jose"] = 14
-	m["Pepito"] = 20
+	// Otra manera
+	var otherCar car
+	otherCar.brand = "Ferrari"
 
-	fmt.Println(m)
-
-	// Recorrer un map
-	for i, v := range m {
-		fmt.Println(i, v)
-	}
-
-	// Encontrar valor
-	value, ok := m["jose"] // "ok" retorna true si la clave existe
-	fmt.Println(value, ok)
-
-	value1, ok := m["josep"] // "ok" retorna true si la clave existe
-	fmt.Println(value1, ok)
+	fmt.Println(otherCar)
 
 }
