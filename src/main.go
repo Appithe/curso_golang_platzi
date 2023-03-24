@@ -5,25 +5,30 @@ import (
 )
 
 func main() {
-	// Defer --> antes de terminar de ejecutarse la función ejecuta el código que le sigue en la linea, se recomienda usar una por función; se puede usar para cerrar sesiones en DDBB
-	defer fmt.Print("Hola")
-	fmt.Println("Mundo")
+	// Array
+	var array [4]int
+	array[0] = 1
+	array[1] = 2
 
-	// Continue y break
-	for i := 0; i < 10; i++ {
-		fmt.Println(i)
+	fmt.Println(array, len(array), cap(array)) // valores del array, legth del array, capacidad del array
 
-		// Continue --> se puede usar para manejo de errores
-		if i == 2 {
-			fmt.Println("Es 2")
-			continue
-		}
+	// Slice
+	slice := []int{0, 1, 2, 3, 4, 5, 6}
+	fmt.Println(slice, len(slice), cap(slice))
 
-		// Break
-		if i == 8 {
-			fmt.Println("Break")
-			break
-		}
-	}
+	// Métodos en el slice
+	fmt.Println(slice[0])
+	fmt.Println(slice[:3]) // slice[incluye la posición : no incluye la posición]
+	fmt.Println(slice[2:4])
+	fmt.Println(slice[4:])
+
+	// Append
+	slice = append(slice, 7)
+	fmt.Println(slice)
+
+	// Append nueva list
+	newSlice := []int{8, 9, 10}
+	slice = append(slice, newSlice...)
+	fmt.Println(slice)
 
 }
